@@ -328,11 +328,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.crank</groupId>
-				<artifactId>crank-jsf-support</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.crank</groupId>
 				<artifactId>crank-validation</artifactId>
 				<version>${project.version}</version>
 			</dependency>
@@ -346,11 +341,6 @@
 				<artifactId>crank-crud</artifactId>
 				<version>${project.version}</version>
 				<type>test-jar</type>
-			</dependency>
-			<dependency>
-				<groupId>org.crank</groupId>
-				<artifactId>crank-validation</artifactId>
-				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.crank</groupId>
@@ -413,11 +403,6 @@
 				<artifactId>crank-test-support</artifactId>
 				<version>${project.version}</version>
 				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.crank</groupId>
-				<artifactId>crank-springmvc-validation</artifactId>
-				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-dbcp</groupId>
