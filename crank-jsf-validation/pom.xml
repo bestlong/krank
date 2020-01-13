@@ -1,72 +1,74 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.crank</groupId>
-		<artifactId>crank-base</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>org.crank</groupId>
+        <artifactId>crank-base</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+    </parent>
 
-	<groupId>org.crank</groupId>
-	<artifactId>crank-jsf-validation</artifactId>
-	<name>crank-jsf-validation</name>
-	<version>2.0.0-SNAPSHOT</version>
+    <groupId>org.crank</groupId>
+    <artifactId>crank-jsf-validation</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.crank</groupId>
-			<artifactId>crank-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.crank</groupId>
-			<artifactId>crank-jsf-support</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.crank</groupId>
-			<artifactId>crank-test-support</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>jsf-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-el_1.0_spec</artifactId>
-			<version>1.0.1</version>
-			<scope>provided</scope>
-		</dependency> 
-		<dependency>
-			<groupId>el-impl</groupId>
-			<artifactId>el-impl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>		        		
-		<dependency>
-			<groupId>javax.faces</groupId>
-			<artifactId>jsf-impl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-validator</groupId>
-			<artifactId>commons-validator</artifactId>
-			<version>1.3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>oro</groupId>
-			<artifactId>oro</artifactId>
-			<version>2.0.8</version>
-			<scope>test</scope>
-		</dependency>
+    <name>crank-jsf-validation</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.crank</groupId>
+            <artifactId>crank-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.crank</groupId>
+            <artifactId>crank-jsf-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.crank</groupId>
+            <artifactId>crank-test-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_1.0_spec</artifactId>
+            <version>1.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>el-impl</groupId>
+            <artifactId>el-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.3.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>oro</groupId>
+            <artifactId>oro</artifactId>
+            <version>2.0.8</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
             <optional>true</optional>
         </dependency>
-	</dependencies>
+    </dependencies>
 </project>
