@@ -362,6 +362,12 @@
             </dependency>
             <dependency>
                 <groupId>org.crank</groupId>
+                <artifactId>crank-crud</artifactId>
+                <version>${project.version}</version>
+                <type>test-jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.crank</groupId>
                 <artifactId>crank-validation</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -369,12 +375,6 @@
                 <groupId>org.crank</groupId>
                 <artifactId>crank-springmvc-validation</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.crank</groupId>
-                <artifactId>crank-crud</artifactId>
-                <version>${project.version}</version>
-                <type>test-jar</type>
             </dependency>
             <dependency>
                 <groupId>org.crank</groupId>
