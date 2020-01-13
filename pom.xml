@@ -17,6 +17,8 @@
         <cargo.wait>false</cargo.wait>
         <copyright.year>2004-2007</copyright.year>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.test.skip>false</maven.test.skip><!--  crank-core need  -->
     </properties>
 
     <distributionManagement>
