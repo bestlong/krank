@@ -15,11 +15,14 @@
     </prerequisites>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+
         <cargo.host>localhost</cargo.host>
         <cargo.port>9876</cargo.port>
         <cargo.wait>false</cargo.wait>
         <copyright.year>2004-2007</copyright.year>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <maven.test.skip>false</maven.test.skip><!--  crank-core need  -->
 
