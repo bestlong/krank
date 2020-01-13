@@ -707,8 +707,8 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate</artifactId>
-				<version>3.2.2.ga</version>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.2.GA</version>
 				<scope>provided</scope>
 			</dependency>
 
