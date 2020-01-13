@@ -51,10 +51,8 @@
                         <dependencies>
                             <dependency>
                                 <groupId>mysql</groupId>
-                                <artifactId>
-                                    mysql-connector-java
-                                </artifactId>
-                                <version>5.0.3</version>
+                                <artifactId>mysql-connector-java</artifactId>
+                                <version>6.0.6</version>
                             </dependency>
                         </dependencies>
                         <configuration>
