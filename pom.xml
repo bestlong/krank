@@ -176,12 +176,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <configuration>
-                    <wtpversion>1.0</wtpversion>
-                </configuration>
-            </plugin>
         </plugins>
         <pluginManagement>
 
@@ -219,10 +213,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.5</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-eclipse-plugin</artifactId>
-                    <version>2.5.1</version>
                 </plugin>
 
                 <plugin>
