@@ -1,6 +1,7 @@
 package org.crank.crud.controller;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import static org.crank.core.LogUtils.debug;
 import org.crank.core.CrankValidationException;
 import org.crank.message.MessageManagerUtils;
@@ -53,7 +54,7 @@ public abstract class SelectOneController<T extends Serializable, PK extends Ser
 
 
     /** Used for logging. */
-    protected Logger logger = Logger.getLogger(SelectOneController.class);
+    protected Logger logger = LogManager.getLogger(SelectOneController.class);
 
     /* Optional parentEntity. */
     protected Object parentEntity = null;

@@ -6,7 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.annotations.design.AllowsConfigurationInjection;
 import org.crank.annotations.design.ExpectsInjection;
 import org.crank.annotations.design.OptionalInjection;
@@ -34,7 +35,7 @@ import org.crank.web.RequestParameterMapFinderImpl;
  */
 public abstract class CrudControllerBase<T extends Serializable, PK extends Serializable>
 		implements CrudOperations<T>, Serializable {
-	protected Logger logger = Logger.getLogger(CrudControllerBase.class);
+	protected Logger logger = LogManager.getLogger(CrudControllerBase.class);
 
     /* The DAO we use to persist T objects to the databasae. */
     protected GenericDao<T, PK> dao;

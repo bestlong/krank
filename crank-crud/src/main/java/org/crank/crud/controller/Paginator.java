@@ -4,10 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.core.RequestParameterMapFinder;
 import org.crank.core.LogUtils;
 import org.crank.crud.controller.datasource.PagingDataSource;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 @SuppressWarnings("serial")
 public class Paginator implements Pageable, Serializable {
@@ -23,7 +24,7 @@ public class Paginator implements Pageable, Serializable {
     protected List<Integer> pageNumberList;
     protected RequestParameterMapFinder requestParameterMapFinder;
     protected String currentPageParamName = "currentPage";
-    protected Logger logger = Logger.getLogger(Paginator.class);
+    protected Logger logger = LogManager.getLogger(Paginator.class);
     protected List<?> page;
     protected boolean initialized;
     public static int NO_ASSUMED_COUNT = -1;

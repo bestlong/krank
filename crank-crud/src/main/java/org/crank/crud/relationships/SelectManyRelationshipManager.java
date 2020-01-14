@@ -7,14 +7,15 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 @SuppressWarnings("serial")
 public class SelectManyRelationshipManager extends RelationshipManager {
 
-    protected Logger logger = Logger.getLogger(SelectManyRelationshipManager.class);
+    protected Logger logger = LogManager.getLogger(SelectManyRelationshipManager.class);
     
     private Object parentObject;
 	private String idProperty="id";

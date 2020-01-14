@@ -8,7 +8,8 @@ import java.util.Map;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.apache.log4j.PropertyConfigurator;
 import org.crank.crud.JNDIHelper;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
@@ -32,7 +33,7 @@ public abstract class SpringTestNGBase {
     private static final Map<String, ConfigurableApplicationContext> contexts = new HashMap<String, ConfigurableApplicationContext>();
     protected ConfigurableApplicationContext applicationContext;
     private OpenEntityManagerInTest openEntityManagerInTest;
-    protected Logger logger = Logger.getLogger( getClass() );
+    protected Logger logger = LogManager.getLogger( getClass() );
 
     public void setUpJndiSpring() {
         try {

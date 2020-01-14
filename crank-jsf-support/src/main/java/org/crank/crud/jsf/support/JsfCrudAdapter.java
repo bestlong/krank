@@ -10,11 +10,12 @@ import javax.faces.model.SelectItem;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Cookie;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.crud.controller.*;
 import org.crank.crud.criteria.Select;
 import org.crank.message.MessageUtils;
 import org.crank.core.LogUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 /**
  * This class adapts a CrudController to the JSF world.
@@ -36,7 +37,7 @@ public class JsfCrudAdapter<T extends Serializable, PK extends Serializable> imp
     protected boolean propertyEditorOpen;
     protected String entityName;
 
-    protected Logger log = Logger.getLogger(JsfCrudAdapter.class);
+    protected Logger log = LogManager.getLogger(JsfCrudAdapter.class);
 
 
     public JsfCrudAdapter() {

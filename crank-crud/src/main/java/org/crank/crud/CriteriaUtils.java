@@ -4,8 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.crud.criteria.Between;
 import org.crank.crud.criteria.Comparison;
 import org.crank.crud.criteria.Criterion;
@@ -23,7 +23,7 @@ import org.crank.crud.join.SimpleRelationshipJoin;
 
 public class CriteriaUtils {
 	
-	protected static Logger logger = Logger.getLogger(GenericDaoUtils.class);
+	protected static Logger logger = LogManager.getLogger(GenericDaoUtils.class);
 
 	
 	public static String constuctWhereClause(final Group group) {

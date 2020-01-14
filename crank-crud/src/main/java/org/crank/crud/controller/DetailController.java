@@ -3,7 +3,9 @@ package org.crank.crud.controller;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import org.crank.crud.relationships.RelationshipManager;
 
@@ -34,7 +36,7 @@ public class DetailController<T extends Serializable, PK extends Serializable> e
      */
     private Collection<T> changedEntities = new HashSet<T>();
 
-    protected Logger logger = Logger.getLogger(DetailController.class);
+    protected Logger logger = LogManager.getLogger(DetailController.class);
     
     private boolean forcePersist;
     

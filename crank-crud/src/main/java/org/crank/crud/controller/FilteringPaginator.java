@@ -1,5 +1,6 @@
 package org.crank.crud.controller;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.core.MapUtils;
 import org.crank.core.TypeUtils;
 import org.crank.core.LogUtils;
@@ -18,7 +19,7 @@ import static org.crank.core.LogUtils.debug;
 import static org.crank.core.LogUtils.info;
 import org.crank.message.MessageUtils;
 import org.crank.message.MessageManagerUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 /**
  * This class is the main "backing bean" for paginated, filterable, sortable
@@ -49,7 +50,7 @@ import org.apache.log4j.Logger;
 public class FilteringPaginator extends Paginator implements
 		FilterablePageable, Serializable {
 
-    protected Logger log = Logger.getLogger(FilteringPaginator.class);
+    protected Logger log = LogManager.getLogger(FilteringPaginator.class);
 
     /** User filters. A filter is a combination of a Comparison and an OrderBy. */
 	private Map<String, FilterableProperty> filterableProperties = new FilterMap();

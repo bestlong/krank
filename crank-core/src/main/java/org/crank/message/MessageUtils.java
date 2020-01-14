@@ -3,7 +3,8 @@ package org.crank.message;
 import java.util.*;
 
 import org.crank.core.CrankContext;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * Functions to aid developing JSF applications.
@@ -11,7 +12,7 @@ import org.apache.log4j.Logger;
 public final class MessageUtils {
 	public static final String TOOL_TIP = "toolTip";
 	public static final String LABEL_TOOL_TIP = "labelToolTip";
-    protected static Logger logger = Logger.getLogger(MessageUtils.class);
+    protected static Logger logger = LogManager.getLogger(MessageUtils.class);
 
     /**
 	 * Stops creation of a new MessageUtils object.

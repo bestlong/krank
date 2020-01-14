@@ -10,8 +10,8 @@ import javax.el.ELException;
 import java.io.IOException;
 import java.util.*;
 
-
-//import org.apache.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 /**
  * Created by IntelliJ IDEA.
@@ -27,7 +27,7 @@ import java.util.*;
  */
 public final class SpringSecurityAuthorize extends TagHandler {
 
-    //private final Logger log = Logger.getLogger(SpringSecurityAuthorize.class);
+//    private final Logger log = LogManager.getLogger(SpringSecurityAuthorize.class);
     private final TagAttribute ifAllGranted;
     private final TagAttribute ifAnyGranted;
     private final TagAttribute ifNotGranted;
