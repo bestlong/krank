@@ -544,8 +544,8 @@
 
             <dependency>
                 <groupId>org.springframework.javaconfig</groupId>
-                <artifactId>spring-javaconfig</artifactId>
-                <version>1.0.0.m3</version>
+                <artifactId>org.springframework.config.java</artifactId>
+                <version>1.0.0.M4</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.springframework</groupId>
