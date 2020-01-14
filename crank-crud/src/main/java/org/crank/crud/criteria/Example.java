@@ -7,10 +7,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Example extends Group {
-    protected final Logger log = Logger.getLogger( this.getClass() );
+    protected final Logger log = LogManager.getLogger( this.getClass() );
 	private Object example;
 	private Set<String> excludedProperties = new HashSet<String>();
 	{

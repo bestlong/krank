@@ -1,62 +1,63 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-      <groupId>org.crank.integration</groupId>
-      <artifactId>crank-integration-base</artifactId>
-      <version>2.0.0-SNAPSHOT</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.crank.integration</groupId>
+        <artifactId>crank-integration-base</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+    </parent>
+
     <groupId>org.crank</groupId>
     <artifactId>crank-preload-web-test</artifactId>
-    <name>Crank :: Preload Web Test</name>
     <version>2.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
+
+    <name>Crank :: Preload Web Test</name>
+
     <build>
-      <finalName>crank-preload</finalName>
-      <plugins>
-	<plugin>
-	  <groupId>org.mortbay.jetty</groupId>
-	  <artifactId>maven-jetty-plugin</artifactId>
-	  <dependencies>
-	    <dependency>
-	      <groupId>log4j</groupId>
-	      <artifactId>log4j</artifactId>
-	      <version>1.2.13</version>
-	      <type>jar</type>
-	    </dependency>
-	    <dependency>
-	      <groupId>javax.faces</groupId>
-	      <artifactId>jsf-api</artifactId>
-	      <version>1.2_04</version>
-	    </dependency>
-	    <dependency>
-	      <groupId>javax.faces</groupId>
-	      <artifactId>jsf-impl</artifactId>
-	      <version>1.2_04</version>
-	    </dependency>
-	  </dependencies>
-	</plugin>
-      </plugins>
+        <finalName>crank-preload</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>${log4j.version}}</version>
+                        <type>jar</type>
+                    </dependency>
+                    <dependency>
+                        <groupId>javax.faces</groupId>
+                        <artifactId>jsf-api</artifactId>
+                        <version>1.2_04</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>javax.faces</groupId>
+                        <artifactId>jsf-impl</artifactId>
+                        <version>1.2_04</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
     </build>
     <dependencies>
-      <dependency>
-	<groupId>javax.servlet</groupId>
-	<artifactId>jsp-api</artifactId>
-	<version>2.0</version>
-	<scope>provided</scope>
-      </dependency>
-      <dependency>
-	<groupId>javax.servlet</groupId>
-	<artifactId>servlet-api</artifactId>
-	<version>2.4</version>
-	<scope>provided</scope>
-      </dependency>
         <dependency>
-            <groupId>org.crank</groupId>
-            <artifactId>crank-core</artifactId>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.crank</groupId>
-            <artifactId>crank-crud</artifactId>
+            <artifactId>crank-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.crank</groupId>
@@ -78,13 +79,12 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <classifier>jdk15</classifier>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
         </dependency>
-		        <dependency>
+        <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-jpa_3.0_spec</artifactId>
             <optional>true</optional>
@@ -117,7 +117,7 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
+            <artifactId>hibernate-core</artifactId>
             <optional>true</optional>
         </dependency>
     </dependencies>

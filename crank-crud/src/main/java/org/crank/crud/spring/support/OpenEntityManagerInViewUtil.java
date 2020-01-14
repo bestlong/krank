@@ -1,9 +1,10 @@
 package org.crank.crud.spring.support;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.orm.jpa.EntityManagerHolder;
 import org.springframework.dao.DataAccessResourceFailureException;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
@@ -11,7 +12,7 @@ import javax.persistence.PersistenceException;
 
 public class OpenEntityManagerInViewUtil {
 
-    private static Logger logger = Logger.getLogger(OpenEntityManagerInViewUtil.class);
+    private static Logger logger = LogManager.getLogger(OpenEntityManagerInViewUtil.class);
 
     public static void runWithEntityManager(EntityManagerFactory emf, Runnable runnable) {
         boolean participate = false;

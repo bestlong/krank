@@ -1,6 +1,7 @@
 package org.crank.test.base;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.FilteredDataSet;
@@ -31,7 +32,7 @@ public abstract class DbUnitTestBase extends SpringTestNGBase {
 
     protected EntityManagerFactory entityManagerFactory;
     private IDatabaseTester databaseTester;
-    protected final Logger log = Logger.getLogger( this.getClass() );
+    protected final Logger log = LogManager.getLogger( this.getClass() );
 
     private IDataSet loadDataSet( IDatabaseConnection connection ) throws Exception {
         // load the data set

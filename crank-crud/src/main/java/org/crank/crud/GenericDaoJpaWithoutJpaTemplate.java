@@ -16,7 +16,8 @@ import javax.persistence.PersistenceException;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.Query;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.crud.criteria.Criterion;
 import org.crank.crud.criteria.Example;
 import org.crank.crud.criteria.Group;
@@ -46,7 +47,7 @@ public class GenericDaoJpaWithoutJpaTemplate<T, PK extends Serializable>
 
 	protected boolean distinct = false;
 
-	protected Logger logger = Logger.getLogger(GenericDaoJpa.class);
+	protected Logger logger = LogManager.getLogger(GenericDaoJpa.class);
 	
 	private String newSelectStatement = null;
 	

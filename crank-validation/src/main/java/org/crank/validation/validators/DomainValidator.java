@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.core.AnnotationData;
 import org.crank.core.AnnotationUtils;
 import org.crank.core.MapUtils;
@@ -38,7 +39,7 @@ import org.springframework.beans.BeanWrapperImpl;
  */
 public class DomainValidator extends AbstractValidator {
 	private static final long serialVersionUID = 1L;
-	private Logger log = Logger.getLogger(this.getClass()); 
+	private Logger log = LogManager.getLogger(this.getClass());
 
 	private Object rootObject;
 	

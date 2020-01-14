@@ -3,17 +3,18 @@ package org.crank.crud.controller;
 import java.io.Serializable;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.crud.relationships.SelectManyRelationshipManager;
 import static org.crank.core.LogUtils.debug;
 import org.crank.core.CrankValidationException;
 import org.crank.message.MessageManagerUtils;
 import org.crank.message.MessageUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 public abstract class SelectManyController<T extends Serializable, PK extends Serializable> {
 
 
-	protected Logger logger = Logger.getLogger(SelectManyController.class);
+	protected Logger logger = LogManager.getLogger(SelectManyController.class);
     
     private SelectManyRelationshipManager manager;
     private FilterablePageable paginator;

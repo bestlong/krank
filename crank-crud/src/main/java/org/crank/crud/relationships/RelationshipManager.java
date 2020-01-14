@@ -14,17 +14,18 @@ import java.util.Map;
 import java.util.Set;
 
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.core.CrankException;
 import org.crank.core.StringUtils;
 import org.crank.crud.controller.CrudUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 
 public class RelationshipManager implements Serializable {
 
-    protected Logger logger = Logger.getLogger(RelationshipManager.class);
+    protected Logger logger = LogManager.getLogger(RelationshipManager.class);
 
     /**
      * @CONFIG

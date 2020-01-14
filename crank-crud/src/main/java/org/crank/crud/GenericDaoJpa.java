@@ -1,6 +1,7 @@
 package org.crank.crud;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.crud.criteria.*;
 import org.crank.crud.criteria.OrderBy;
 import org.crank.crud.join.*;
@@ -39,7 +40,7 @@ public class GenericDaoJpa<T, PK extends Serializable> extends JpaDaoSupport
 
 	protected boolean distinct = false;
 
-	protected Logger logger = Logger.getLogger(GenericDaoJpa.class);
+	protected Logger logger = LogManager.getLogger(GenericDaoJpa.class);
 	
 	private String newSelectStatement = null;
 	

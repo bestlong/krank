@@ -1,6 +1,6 @@
 package org.crank.test.base;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.mock.jndi.SimpleNamingContextBuilder;
 import org.w3c.dom.Document;

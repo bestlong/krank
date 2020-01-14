@@ -9,7 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Query;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.crank.crud.criteria.Between;
 import org.crank.crud.criteria.Comparison;
 import org.crank.crud.criteria.Criterion;
@@ -20,7 +21,7 @@ import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
 public class GenericDaoUtils {
-	protected static Logger logger = Logger.getLogger(GenericDaoUtils.class);
+	protected static Logger logger = LogManager.getLogger(GenericDaoUtils.class);
 	
     public static boolean hasId(Object entity, String idPropertyName) {
 		BeanWrapper bw = new BeanWrapperImpl(entity);

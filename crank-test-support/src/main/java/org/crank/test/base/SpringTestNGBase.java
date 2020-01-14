@@ -1,7 +1,8 @@
 package org.crank.test.base;
 
 //import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.testng.annotations.BeforeClass;
@@ -29,7 +30,7 @@ public abstract class SpringTestNGBase {
     protected static final Map<String, ConfigurableApplicationContext> contexts = new HashMap<String, ConfigurableApplicationContext>();
     protected ConfigurableApplicationContext applicationContext;
     protected OpenEntityManagerInTest openEntityManagerInTest;
-    protected Logger logger = Logger.getLogger( getClass() );
+    protected Logger logger = LogManager.getLogger( getClass() );
 
     public void setUpJndiSpring() {
         try {

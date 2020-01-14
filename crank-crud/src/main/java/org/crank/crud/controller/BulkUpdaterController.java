@@ -1,5 +1,6 @@
 package org.crank.crud.controller;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.crud.GenericDao;
 import org.crank.core.CrankException;
 import org.springframework.beans.BeanWrapper;
@@ -10,7 +11,7 @@ import java.util.*;
 import java.io.Serializable;
 import static org.crank.core.LogUtils.debug;
 import org.crank.message.MessageManagerUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 
 public class BulkUpdaterController <T> {
@@ -21,7 +22,7 @@ public class BulkUpdaterController <T> {
     private Class<T> type;
     private EntityLocator<?> entityLocator;
     private boolean show;
-    protected Logger log = Logger.getLogger(BulkUpdaterController.class);
+    protected Logger log = LogManager.getLogger(BulkUpdaterController.class);
     private T prototype;
     @SuppressWarnings("unchecked")
 	private Map map;

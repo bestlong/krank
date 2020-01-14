@@ -1,25 +1,29 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <artifactId>crank-base</artifactId>
         <groupId>org.crank</groupId>
+        <artifactId>crank-base</artifactId>
         <version>2.0.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.crank</groupId>
     <artifactId>crank-jsf-support</artifactId>
-    <name>crank-jsf-support</name>
     <version>2.0.0-SNAPSHOT</version>
-    <url>http://maven.apache.org</url>
+
+    <name>crank-jsf-support</name>
+
     <dependencies>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
             <optional>true</optional>
-        </dependency>            
+        </dependency>
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-ui</artifactId>
@@ -51,15 +55,14 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <classifier>jdk15</classifier>
         </dependency>
-		
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-el_1.0_spec</artifactId>
-			<version>1.0.1</version>
-			<scope>provided</scope>
-		</dependency> 
+
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_1.0_spec</artifactId>
+            <version>1.0.2</version>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.myfaces.tomahawk</groupId>
@@ -68,7 +71,7 @@
         <dependency>
             <groupId>com.sun.facelets</groupId>
             <artifactId>jsf-facelets</artifactId>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -87,7 +90,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.javaconfig</groupId>
-            <artifactId>spring-javaconfig</artifactId>
+            <artifactId>org.springframework.config.java</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -123,8 +126,8 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
+            <artifactId>hibernate-core</artifactId>
             <optional>true</optional>
-        </dependency>        
+        </dependency>
     </dependencies>
 </project>

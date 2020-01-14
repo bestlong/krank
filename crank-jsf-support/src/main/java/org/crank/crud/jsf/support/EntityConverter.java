@@ -3,6 +3,7 @@ package org.crank.crud.jsf.support;
 import java.io.Serializable;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.core.CrankContext;
 import org.crank.core.ObjectRegistry;
 import org.crank.core.LogUtils;
@@ -10,7 +11,7 @@ import org.crank.crud.GenericDao;
 import org.crank.crud.controller.CrudManagedObject;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
@@ -30,7 +31,7 @@ public class EntityConverter implements Converter, Serializable {
     /**
      * Logger.
      */
-    protected Logger logger = Logger.getLogger(EntityConverter.class);
+    protected Logger logger = LogManager.getLogger(EntityConverter.class);
 
     /**
 	 * DAO crud to look up Entity based on id.

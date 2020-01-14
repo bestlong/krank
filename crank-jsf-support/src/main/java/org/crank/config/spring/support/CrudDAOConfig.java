@@ -7,6 +7,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.crud.GenericDao;
 import org.crank.crud.GenericDaoFactory;
 import org.crank.crud.controller.CrudManagedObject;
@@ -21,11 +22,11 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.AnnotationTransactionAttributeSource;
 import org.springframework.transaction.interceptor.TransactionInterceptor;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 public abstract class CrudDAOConfig implements InitializingBean {
 
-    protected Logger logger = Logger.getLogger(CrudDAOConfig.class);
+    protected Logger logger = LogManager.getLogger(CrudDAOConfig.class);
 
     private DataSource dataSource;
 

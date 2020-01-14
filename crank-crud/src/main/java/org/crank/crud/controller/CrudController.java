@@ -3,8 +3,9 @@ package org.crank.crud.controller;
 import java.io.Serializable;
 import java.util.Collection;
 
+import org.apache.logging.log4j.LogManager;
 import org.crank.message.MessageManagerUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Controls CRUD operations from an application.
@@ -16,7 +17,7 @@ import org.apache.log4j.Logger;
  * @see Toggleable
  */
 public class CrudController<T extends Serializable, PK extends Serializable> extends CrudControllerBase<T, PK>  {
-    protected Logger logger = Logger.getLogger(CrudController.class);
+    protected Logger logger = LogManager.getLogger(CrudController.class);
     
     /**
 	 * 

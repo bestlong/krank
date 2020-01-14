@@ -24,13 +24,14 @@ public class AnnotationValidatorMetaDataReaderTest {
 	public void testReadMetaData() {
 		List<ValidatorMetaData> list = annotationValidatorMetaDataReader.readMetaData(Employee.class, "age");
 		assertNotNull(list);
-		ValidatorMetaData required = list.get(0);
-		assertEquals("required", required.getName());
-		ValidatorMetaData range = list.get(1);
+		assertEquals(2, list.size());
+		ValidatorMetaData range = list.get(0);
 		assertEquals("range", range.getName());
 		assertEquals("10",range.getProperties().get("max"));
 		assertEquals("1",range.getProperties().get("min"));
-		
+		ValidatorMetaData required = list.get(1);
+		assertEquals("required", required.getName());
+
 	}
 
 	@Test

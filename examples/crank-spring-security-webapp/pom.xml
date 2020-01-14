@@ -1,15 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.crank.example</groupId>
         <artifactId>crank-example-base</artifactId>
         <version>2.0.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
+
     <artifactId>crank-spring-security-webapp</artifactId>
-    <name>Crank :: Crud :: Crank Spring Security Webapp</name>
     <version>2.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <url>http://code.google.com/p/krank</url>
+
+    <name>Crank :: Crud :: Crank Spring Security Webapp</name>
+
     <dependencies>
         <dependency>
             <groupId>org.richfaces.ui</groupId>
@@ -56,8 +60,8 @@
             <artifactId>crank-test-support</artifactId>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -76,7 +80,6 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <classifier>jdk15</classifier>
         </dependency>
         <dependency>
             <groupId>org.crank</groupId>
@@ -94,7 +97,7 @@
             <groupId>org.crank</groupId>
             <artifactId>crank-jsf-validation</artifactId>
         </dependency>
-     	<dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
         </dependency>
@@ -102,12 +105,11 @@
             <groupId>aopalliance</groupId>
             <artifactId>aopalliance</artifactId>
         </dependency>
-        
-<!-- start javaconfig -->
-		<dependency>
+
+        <!-- start javaconfig -->
+        <dependency>
             <groupId>org.springframework.javaconfig</groupId>
-            <artifactId>spring-javaconfig</artifactId>
-            <version>1.0-m2</version>
+            <artifactId>org.springframework.config.java</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>asm</groupId>
@@ -121,6 +123,7 @@
                     <groupId>org.aopalliance</groupId>
                     <artifactId>aopalliance</artifactId>
                 </exclusion>
+
                 <exclusion>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring-web</artifactId>
@@ -139,7 +142,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-		<!-- end javaconfig-->
+        <!-- end javaconfig-->
 
         <dependency>
             <groupId>aspectj</groupId>
@@ -154,34 +157,31 @@
             <artifactId>el-impl</artifactId>
             <scope>provided</scope>
         </dependency>
-<dependency>
-    <groupId>org.springframework.security</groupId>
-    <artifactId>spring-security-core</artifactId>
-    <version>2.0.4</version>
-</dependency>
 
-<dependency>
-    <groupId>org.springframework.security</groupId>
-    <artifactId>spring-security-core-tiger</artifactId>
-    <version>2.0.4</version>
-</dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core-tiger</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-acl</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
 
-<dependency>
-    <groupId>org.springframework.security</groupId>
-    <artifactId>spring-security-acl</artifactId>
-    <version>2.0.4</version>
-</dependency>        
+        <!-- Spring Security Tag Dependency -->
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_1.0_spec</artifactId>
+            <version>1.0.2</version>
+            <scope>provided</scope>
+        </dependency>
 
-
-<!-- Spring Security Tag Dependency -->        
-
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-el_1.0_spec</artifactId>
-			<version>1.0.1</version>
-			<scope>provided</scope>            
-		</dependency> 
-        
         <dependency>
             <groupId>org.crank.example</groupId>
             <artifactId>employee-jpa-model</artifactId>
@@ -199,8 +199,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -208,9 +208,9 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <dependencies>
                     <dependency>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                        <version>1.2.13</version>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>${log4j.version}</version>
                         <type>jar</type>
                     </dependency>
                     <dependency>
@@ -256,7 +256,7 @@
                 </dependency>
                 <dependency>
                     <groupId>org.hibernate</groupId>
-                    <artifactId>hibernate</artifactId>
+                    <artifactId>hibernate-core</artifactId>
                     <scope>compile</scope>
                 </dependency>
             </dependencies>

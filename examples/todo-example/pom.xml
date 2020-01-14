@@ -56,8 +56,8 @@
             <artifactId>crank-test-support</artifactId>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -76,7 +76,6 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <classifier>jdk15</classifier>
         </dependency>
         <dependency>
             <groupId>org.crank</groupId>
@@ -104,7 +103,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.javaconfig</groupId>
-            <artifactId>spring-javaconfig</artifactId>
+            <artifactId>org.springframework.config.java</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -144,9 +143,9 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <dependencies>
                     <dependency>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                        <version>1.2.13</version>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>${log4j.version}</version>
                         <type>jar</type>
                     </dependency>
                     <dependency>
@@ -192,7 +191,7 @@
                 </dependency>
                 <dependency>
                     <groupId>org.hibernate</groupId>
-                    <artifactId>hibernate</artifactId>
+                    <artifactId>hibernate-core</artifactId>
                     <scope>compile</scope>
                 </dependency>
             </dependencies>
