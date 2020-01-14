@@ -10,7 +10,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.apache.log4j.PropertyConfigurator;
+//import org.apache.log4j.PropertyConfigurator;
 import org.crank.crud.JNDIHelper;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -25,10 +25,10 @@ import org.testng.annotations.BeforeClass;
  */
 public abstract class SpringTestNGBase {
 
-    static {
-        URL log4j = Thread.currentThread().getContextClassLoader().getResource( "log4j.xml" );
-        PropertyConfigurator.configure( log4j );
-    }
+//    static {
+//        URL log4j = Thread.currentThread().getContextClassLoader().getResource( "log4j.xml" );
+//        PropertyConfigurator.configure( log4j );
+//    }
 
     private static final Map<String, ConfigurableApplicationContext> contexts = new HashMap<String, ConfigurableApplicationContext>();
     protected ConfigurableApplicationContext applicationContext;
