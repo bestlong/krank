@@ -203,8 +203,8 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.logging.log4j</groupId>
@@ -215,12 +215,12 @@
                     <dependency>
                         <groupId>javax.faces</groupId>
                         <artifactId>jsf-api</artifactId>
-                        <version>1.2_04-p01</version>
+                        <version>1.2-20</version>
                     </dependency>
                     <dependency>
                         <groupId>javax.faces</groupId>
                         <artifactId>jsf-impl</artifactId>
-                        <version>1.2_04-p01</version>
+                        <version>1.2-20</version>
                     </dependency>
                 </dependencies>
             </plugin>
