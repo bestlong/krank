@@ -1,15 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.crank.example</groupId>
         <artifactId>crank-example-base</artifactId>
         <version>2.0.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
+
     <artifactId>security-webapp</artifactId>
-    <name>Crank :: Crud :: Security Sample Webapp</name>
-    <version>2.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <url>http://code.google.com/p/krank</url>
+
+    <name>Crank :: Crud :: Security Sample Webapp</name>
 
     <dependencies>
         <dependency>
@@ -90,7 +92,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring</artifactId>
         </dependency>
-		<dependency>
+        <dependency>
             <groupId>aopalliance</groupId>
             <artifactId>aopalliance</artifactId>
         </dependency>
@@ -111,13 +113,13 @@
             <artifactId>el-impl</artifactId>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.crank.example</groupId>
             <artifactId>security-jpa-model</artifactId>
             <version>2.0.0-SNAPSHOT</version>
         </dependency>
-        
+
     </dependencies>
     <build>
         <resources>
