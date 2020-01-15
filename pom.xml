@@ -12,8 +12,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 
         <cargo.host>localhost</cargo.host>
         <cargo.port>9876</cargo.port>
@@ -24,26 +24,26 @@
 
         <log4j.version>2.12.1</log4j.version>
 
-        <spring.version>2.5.5</spring.version>
+        <spring.version>2.5.6.SEC03</spring.version>
         <spring-security.version>2.0.8.RELEASE</spring-security.version>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>arc-mind.release</id>
-            <name>ArcMind Release Repository</name>
-            <url>scp://10.1.22.10/var/www/html/maven.vm.local/maven2</url>
-        </repository>
-        <snapshotRepository>
-            <id>arc-mind.snapshot.release</id>
-            <name>ArcMind Release Repository</name>
-            <url>scp://10.1.22.10/var/www/html/maven.vm.local/maven2-snaps</url>
-        </snapshotRepository>
-        <site>
-            <id>krank.website</id>
-            <url>scp://10.1.22.10/var/www/html/maven.vm.local/vmc-site</url>
-        </site>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>arc-mind.release</id>-->
+<!--            <name>ArcMind Release Repository</name>-->
+<!--            <url>scp://10.1.22.10/var/www/html/maven.vm.local/maven2</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>arc-mind.snapshot.release</id>-->
+<!--            <name>ArcMind Release Repository</name>-->
+<!--            <url>scp://10.1.22.10/var/www/html/maven.vm.local/maven2-snaps</url>-->
+<!--        </snapshotRepository>-->
+<!--        <site>-->
+<!--            <id>krank.website</id>-->
+<!--            <url>scp://10.1.22.10/var/www/html/maven.vm.local/vmc-site</url>-->
+<!--        </site>-->
+<!--    </distributionManagement>-->
 
     <developers>
         <developer>
@@ -69,14 +69,14 @@
         </developer>
     </developers>
 
-    <scm>
-        <connection>scm:svn:http://krank.googlecode.com/svn/trunk</connection>
-        <developerConnection>scm:svn:https://krank.googlecode.com/svn/trunk</developerConnection>
-    </scm>
+<!--    <scm>-->
+<!--        <connection>scm:svn:http://krank.googlecode.com/svn/trunk</connection>-->
+<!--        <developerConnection>scm:svn:https://krank.googlecode.com/svn/trunk</developerConnection>-->
+<!--    </scm>-->
 
     <issueManagement>
-        <system>google</system>
-        <url>http://code.google.com/p/krank/issues/list</url>
+        <system>GitHub</system>
+        <url>https://github.com/bestlong/krank/issues</url>
     </issueManagement>
 
     <build>
@@ -108,8 +108,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -577,12 +577,12 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring</artifactId>
+                <artifactId>spring-aop</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
+                <artifactId>spring</artifactId>
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
