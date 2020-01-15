@@ -9,7 +9,6 @@
     </parent>
 
     <artifactId>crank-spring-security-webapp</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>Crank :: Crud :: Crank Spring Security Webapp</name>
