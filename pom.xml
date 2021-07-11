@@ -285,7 +285,8 @@
     <repositories>
         <repository>
             <id>central</id>
-            <url>https://repo.maven.apache.org/maven2/</url>
+<!--            <url>https://repo.maven.apache.org/maven2/</url>-->
+            <url>https://maven.aliyun.com/repository/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -295,9 +296,21 @@
         </repository>
 
         <repository>
+            <id>jboss-repo</id>
+            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+        </repository>
+
+        <repository>
             <id>spring-plugins</id>
             <name>Spring Plugins</name>
-            <url>https://repo.spring.io/plugins-release/</url>
+<!--            <url>https://repo.spring.io/plugins-release/</url>-->
+            <url>https://maven.aliyun.com/repository/spring-plugin</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
 
         <!-- <repository>
